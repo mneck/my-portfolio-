@@ -1,10 +1,34 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "sidebar main corner"
+    "sidebar main corner";
+
+  grid-auto-rows: 0.1fr 2.8fr 0.1fr;
+  grid-auto-columns: 0.7fr 1.9fr 0.3fr;
+  grid-column: solid;
+}
+
+.sidebar {
+  text-align: left;
+  border-right: solid;
+  border-bottom: solid;
+  border-width: 2px;
+  padding: 15px;
+}
+
+.main {
+  padding: 15px;
+  text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,12 +38,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #161d2d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  padding: 2rem;
   font-size: calc(10px + 2vmin);
   color: white;
 }
